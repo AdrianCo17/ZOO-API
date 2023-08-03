@@ -13,3 +13,6 @@ app.use(alimentacionRoutes);
 app.use(especieRoutes);
 app.use(habitatRoutes);
 app.use(origenRoutes);
+
+console.log('Servidor iniciado');
+
