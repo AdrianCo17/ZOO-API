@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.js", // Update this to your entry point file (e.g., app.js, index.js, etc.)
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "app.js" // Update this to your entry point file (e.g., app.js, index.js, etc.)
+    }
+  ]
+}
