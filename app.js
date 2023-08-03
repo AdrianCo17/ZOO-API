@@ -18,5 +18,5 @@ app.get('/', (req, res) => {
   res.send('Hello, this is the root directory!');
 });
 
-console.log('Servidor iniciado');
+module.exports = app;
 
