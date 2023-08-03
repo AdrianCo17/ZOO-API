@@ -13,9 +13,3 @@ app.use(alimentacionRoutes);
 app.use(especieRoutes);
 app.use(habitatRoutes);
 app.use(origenRoutes);
-
-
-// Iniciar el servidor
-app.listen(5652, () => {
-  console.log('Servidor iniciado en el puerto 3000');
-});
