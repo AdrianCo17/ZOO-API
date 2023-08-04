@@ -42,18 +42,15 @@ const Animal = db.define('Animal', {
   },
 },
 {
-    tableName: "animal",
-  }
-);
+  tableName: "animal",
+});
 
 // Definir las relaciones
-Animal.belongsTo(Riesgo);
-Animal.belongsTo(TipoReproduccion);
-Animal.belongsTo(Alimentacion);
-Animal.belongsTo(Especie);
-Animal.belongsTo(Habitat);
-Animal.belongsTo(Origen);
-
+Animal.belongsTo(Riesgo, { foreignKey: 'riesgoId' });
+Animal.belongsTo(TipoReproduccion, { foreignKey: 'tipoReproduccionId' });
+Animal.belongsTo(Alimentacion, { foreignKey: 'alimentacionId' });
 Animal.belongsTo(Especie, { foreignKey: 'especieId' });
+Animal.belongsTo(Habitat, { foreignKey: 'habitatId' });
+Animal.belongsTo(Origen, { foreignKey: 'origenId' });
 
 module.exports = Animal;
