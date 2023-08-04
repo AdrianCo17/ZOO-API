@@ -1,12 +1,9 @@
 const config = {
-  DB_NAME: process.env.DB_NAME,
-  DB_USER: process.env.DB_USER,
-  DB_PASS: process.env.DB_PASS,
-  DB_HOST: process.env.DB_HOST,
-  DB_PORT: process.env.DB_PORT,
+  DB_NAME: "railway",
+  DB_USER: "root",
+  DB_PASS: "NLZI54bW4H15NsxmgyIE",
+  DB_HOST: "containers-us-west-59.railway.app",
+  DB_PORT: "7192",
 };
-
-  console.log('DB_HOST:', process.env.DB_HOST);
-
 
 module.exports = config;
