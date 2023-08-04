@@ -1,14 +1,14 @@
 const { Sequelize } = require('sequelize');
-const configDB = require('./config'); // Import the config file
+const config = require('./config'); // Import the config.js file
 
 const sequelize = new Sequelize(
-  configDB.DB,
-  configDB.username,
-  configDB.password,
+  config.DB_NAME,
+  config.DB_USER,
+  config.DB_PASS,
   {
-    host: configDB.host,
-    port: configDB.port,
-    dialect: configDB.dialect,
+    host: config.DB_HOST,
+    port: config.DB_PORT,
+    dialect: 'mysql',
   }
 );
 module.exports = sequelize;
