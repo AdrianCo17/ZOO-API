@@ -4,9 +4,9 @@ const config = {
   DB_PASS: process.env.DB_PASS,
   DB_HOST: process.env.DB_HOST,
   DB_PORT: process.env.DB_PORT,
+};
 
   console.log('DB_HOST:', process.env.DB_HOST);
 
-};
 
 module.exports = config;
