@@ -11,12 +11,30 @@ async function getAllAnimals(req, res) {
   try {
     const animals = await Animal.findAll({
       include: [
-        { model: Riesgo },
-        { model: TipoReproduccion },
-        { model: Alimentacion },
-        { model: Especie },
-        { model: Habitat },
-        { model: Origen },
+        {
+          model: Riesgo,
+          as: 'Riesgo', // Use the alias specified in the model's relationship
+        },
+        {
+          model: TipoReproduccion,
+          as: 'TipoReproduccion',
+        },
+        {
+          model: Alimentacion,
+          as: 'Alimentacion',
+        },
+        {
+          model: Especie,
+          as: 'Especie',
+        },
+        {
+          model: Habitat,
+          as: 'Habitat',
+        },
+        {
+          model: Origen,
+          as: 'Origen',
+        },
       ],
     });
     res.status(200).json(animals);
