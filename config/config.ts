@@ -1,14 +1,15 @@
-import * as dotenv from 'dotenv';
+const dotenv = require('dotenv');
 
 dotenv.config();
 
 const configDB = {
-  DB: process.env.DB_NAME as string,
-  username: process.env.DB_USER as string,
-  password: process.env.DB_PASS as string,
+  DB: process.env.DB_NAME,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS,
   dialect: 'mysql',
-  host: process.env.DB_HOST as string,
-  port: process.env.DB_PORT as unknown as number,
+  host: process.env.DB_HOST,
+  port: parseInt(process.env.DB_PORT),
 };
-//aydua
-export default configDB;
+
+module.exports = configDB;
+
