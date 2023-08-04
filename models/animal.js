@@ -46,11 +46,11 @@ const Animal = db.define('Animal', {
 });
 
 // Definir las relaciones
-Animal.belongsTo(Riesgo, { as: 'Riesgo', foreignKey: 'riesgo_id' });
-Animal.belongsTo(TipoReproduccion, { as: 'TipoReproduccion', foreignKey: 'tipo_reproduccion_id' });
-Animal.belongsTo(Alimentacion, { as: 'Alimentacion', foreignKey: 'alimentacion_id' });
-Animal.belongsTo(Especie, { as: 'Especie', foreignKey: 'especie_id' });
-Animal.belongsTo(Habitat, { as: 'Habitat', foreignKey: 'habitat_id' });
-Animal.belongsTo(Origen, { as: 'Origen', foreignKey: 'origen_id' });
+Animal.belongsTo(Riesgo, { as: 'Riesgo', foreignKey: 'riesgoId' });
+Animal.belongsTo(TipoReproduccion, { as: 'TipoReproduccion', foreignKey: 'tipoReproduccionId' });
+Animal.belongsTo(Alimentacion, { as: 'Alimentacion', foreignKey: 'alimentacionId' });
+Animal.belongsTo(Especie, { as: 'Especie', foreignKey: 'especieId' });
+Animal.belongsTo(Habitat, { as: 'Habitat', foreignKey: 'habitatId' });
+Animal.belongsTo(Origen, { as: 'Origen', foreignKey: 'origenId' });
 
 module.exports = Animal;
