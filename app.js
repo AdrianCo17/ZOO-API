@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const animalRoutes = require('./routes/animalRoutes');
 const alimentacionRoutes = require('./routes/alimentacionRoutes');
 const especieRoutes = require('./routes/especieRoutes');
@@ -9,6 +10,7 @@ const riesgoRoutes = require('./routes/riesgoRoutes');
 
 const PORT = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(express.json());
 
 // Rutas de la API
