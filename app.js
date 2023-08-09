@@ -9,6 +9,8 @@ const riesgoRoutes = require('./routes/riesgoRoutes');
 
 const PORT = process.env.PORT || 3000;
 
+app.use(express.json());
+
 // Rutas de la API
 app.use(animalRoutes);
 app.use(alimentacionRoutes);
