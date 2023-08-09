@@ -12,9 +12,9 @@ async function obtenerRiesgos(req, res) {
 
 // Crear un nuevo riesgo
 async function crearRiesgo(req, res) {
-  const { nombre, descripcion } = req.body;
+  const { nivel } = req.body;
   try {
-    const riesgo = await Riesgo.create({ nombre, descripcion });
+    const riesgo = await Riesgo.create({ nivel });
     res.status(201).json(riesgo);
   } catch (error) {
     res.status(500).json({ mensaje: 'Error al crear el riesgo', error });
@@ -38,14 +38,13 @@ async function obtenerRiesgoPorId(req, res) {
 // Actualizar un riesgo por su ID
 async function actualizarRiesgo(req, res) {
   const { id } = req.params;
-  const { nombre, descripcion } = req.body;
+  const { nivel } = req.body;
   try {
     const riesgo = await Riesgo.findByPk(id);
     if (!riesgo) {
       return res.status(404).json({ mensaje: 'Riesgo no encontrado' });
     }
-    riesgo.nombre = nombre;
-    riesgo.descripcion = descripcion;
+    riesgo.nivel = nivel;
     await riesgo.save();
     res.json(riesgo);
   } catch (error) {
