@@ -49,12 +49,12 @@ async function getAnimalById(req, res) {
   try {
     const animal = await Animal.findByPk(animalId, {
       include: [
-        { model: Riesgo },
-        { model: TipoReproduccion },
-        { model: Alimentacion },
-        { model: Especie },
-        { model: Habitat },
-        { model: Origen },
+        { model: Riesgo, as: 'Riesgo' },
+        { model: TipoReproduccion, as: 'TipoReproduccion' },
+        { model: Alimentacion, as: 'Alimentacion' },
+        { model: Especie, as: 'Especie' },
+        { model: Habitat, as: 'Habitat' },
+        { model: Origen, as: 'Origen' },
       ],
     });
     if (!animal) {
