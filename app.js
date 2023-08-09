@@ -5,6 +5,7 @@ const alimentacionRoutes = require('./routes/alimentacionRoutes');
 const especieRoutes = require('./routes/especieRoutes');
 const habitatRoutes = require('./routes/habitatRoutes');
 const origenRoutes = require('./routes/origenRoutes');
+const riesgoRoutes = require('./routes/riesgoRoutes');
 
 const PORT = process.env.PORT || 3000;
 
@@ -14,9 +15,10 @@ app.use(alimentacionRoutes);
 app.use(especieRoutes);
 app.use(habitatRoutes);
 app.use(origenRoutes);
+app.use(riesgoRoutes);
 
 app.get('/', (req, res) => {
-  res.send('Hello, this is the root directory!');
+  res.send('Hello, zoo api!');
 });
 
 app.listen(PORT, () => {
