@@ -7,6 +7,7 @@ const especieRoutes = require('./routes/especieRoutes');
 const habitatRoutes = require('./routes/habitatRoutes');
 const origenRoutes = require('./routes/origenRoutes');
 const riesgoRoutes = require('./routes/riesgoRoutes');
+const TipoReproduccion = require('./routes/tipoReproduccionRoutes');
 
 const PORT = process.env.PORT || 3000;
 
@@ -20,6 +21,7 @@ app.use(especieRoutes);
 app.use(habitatRoutes);
 app.use(origenRoutes);
 app.use(riesgoRoutes);
+app.use(TipoReproduccion);
 
 app.get('/', (req, res) => {
   res.send('Hello, zoo api!');
