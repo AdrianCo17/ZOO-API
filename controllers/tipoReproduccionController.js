@@ -1,4 +1,4 @@
-const TipoReproduccion = require('../models/tipo_reproduccion');
+const TipoReproduccion = require('../models/tipoReproduccion');
 
 // Obtener todos los tipos de reproducción
 async function obtenerTiposReproduccion(req, res) {
