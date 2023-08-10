@@ -13,7 +13,7 @@ async function getAllAnimals(req, res) {
       include: [
         {
           model: Riesgo,
-          as: 'Riesgo', // Use the alias specified in the model's relationship
+          as: 'Riesgo', 
         },
         {
           model: TipoReproduccion,
@@ -91,12 +91,12 @@ async function createAnimal(req, res) {
     link_gif,
     createdAt,
     updatedAt,
-    riesgo_id,
-    tipo_reproduccion_id,
-    alimentacion_id,
-    especie_id,
-    habitat_id,
-    origen_id,
+    riesgoId,
+    tipo_reproduccionId,
+    alimentacionId,
+    especieId,
+    habitatId,
+    origenId,
   } = req.body;
   try {
     const animal = await Animal.create({
@@ -110,12 +110,12 @@ async function createAnimal(req, res) {
       link_gif,
       createdAt,
       updatedAt,
-      riesgo_id,
-      tipo_reproduccion_id,
-      alimentacion_id,
-      especie_id,
-      habitat_id,
-      origen_id,
+      riesgoId,
+      tipo_reproduccionId,
+      alimentacionId,
+      especieId,
+      habitatId,
+      origenId,
     });
     res.status(201).json(animal);
   } catch (error) {
@@ -137,12 +137,12 @@ async function updateAnimalById(req, res) {
     link_gif,
     createdAt,
     updatedAt,
-    riesgo_id,
-    tipo_reproduccion_id,
-    alimentacion_id,
-    especie_id,
-    habitat_id,
-    origen_id,
+    riesgoId,
+    tipo_reproduccionId,
+    alimentacionId,
+    especieId,
+    habitatId,
+    origenId,
   } = req.body;
   try {
     const animal = await Animal.findByPk(animalId);
@@ -160,12 +160,12 @@ async function updateAnimalById(req, res) {
       link_gif,
       createdAt,
       updatedAt,
-      riesgo_id,
-      tipo_reproduccion_id,
-      alimentacion_id,
-      especie_id,
-      habitat_id,
-      origen_id,
+      riesgoId,
+      tipo_reproduccionId,
+      alimentacionId,
+      especieId,
+      habitatId,
+      origenId,
     });
     res.status(200).json(animal);
   } catch (error) {
